@@ -9,9 +9,9 @@ const mongoose = require('mongoose');
 const routes = express.Router();
 
 //classes which handles routes
-// var adminRouter = require('./admin/admin.controller');
-// var instructorRouter = require('./instructor/instructor.controller');
-// var courseRouter = require('./course/courseController');
+var adminRouter = require('./Controller/admin.controller');
+var instructorRouter = require('./Controller/instructor.controller');
+var courseRouter = require('./Controller/courseController');
 var studentRouter = require('./routes/student.routes');
 var submissionRouter = require('./routes/submission.routes');
 
@@ -27,10 +27,10 @@ connection.once('open', function () {
     console.log("Connection Established");
 });
 
-//route the requests to the specified class
-// routes.use('/admin', adminRouter);
-// routes.use('/instructor', instructorRouter);
-// routes.use('/course', courseRouter);
+// route the requests to the specified class
+routes.use('/admin', adminRouter);
+routes.use('/instructor', instructorRouter);
+routes.use('/course', courseRouter);
 routes.use('/student', studentRouter);
 routes.use('/submission',submissionRouter);
 
