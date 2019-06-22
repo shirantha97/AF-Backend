@@ -1,8 +1,7 @@
 const express = require('express');
 const adminRoutes = express.Router();
-const nodemailer = require('nodemailer');
 
-let Admin = require('./admin.model');
+let Admin = require('../Model/admin.model');
 
 //create new admin
 adminRoutes.route('/create').post(function(req, res){

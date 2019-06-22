@@ -2,7 +2,7 @@ const express = require('express');
 const courseRoutes = express.Router();
 const nodemailer = require('nodemailer');
 
-let Course = require('./course.model');
+let Course = require('../Model/course.model');
 
 //create new course
 courseRoutes.route('/create').post(function(req, res){
