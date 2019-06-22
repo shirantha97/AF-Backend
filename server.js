@@ -9,9 +9,9 @@ const mongoose = require('mongoose');
 const routes = express.Router();
 
 //classes which handles routes
-var adminRouter = require('./admin/admin.controller');
-var instructorRouter = require('./instructor/instructor.controller');
-var courseRouter = require('./course/courseController');
+var adminRouter = require('./Controller/admin.controller');
+var instructorRouter = require('./Controller/instructor.controller');
+var courseRouter = require('./Controller/courseController');
 
 app.use(cors());
 app.use(bodyParser.urlencoded({extended:true}));
