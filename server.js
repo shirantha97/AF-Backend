@@ -9,11 +9,9 @@ const mongoose = require('mongoose');
 const routes = express.Router();
 
 //classes which handles routes
-// var adminRouter = require('./Controller/admin.controller');
-// var instructorRouter = require('./Controller/instructor.controller');
-// var courseRouter = require('./Controller/courseController');
-var studentRouter = require('./routes/student.routes');
-var submissionRouter = require('./routes/submission.routes');
+var adminRouter = require('./Controller/admin.controller');
+var instructorRouter = require('./Controller/instructor.controller');
+var courseRouter = require('./Controller/courseController');
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -32,7 +30,7 @@ connection.once('open', function () {
 // routes.use('/instructor', instructorRouter);
 // routes.use('/course', courseRouter);
 routes.use('/student', studentRouter);
-routes.use('/submission',submissionRouter);
+routes.use('/submission', submissionRouter);
 
 app.use('/', routes);
 
